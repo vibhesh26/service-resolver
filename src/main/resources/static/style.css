@@ -1,0 +1,178 @@
+:root {
+    --bg: #f6f8fb;
+    --panel: #ffffff;
+    --border: #d1d7e0;
+    --text: #20242d;
+    --muted: #55606f;
+    --primary: #2f6ced;
+    --accent: #ff9f43;
+    --success: #22c55e;
+    --danger: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.page-shell {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+button {
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    opacity: .92;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, .06);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.output-box {
+    min-height: 44px;
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-size: .95rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.graph-panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.graph-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.graph-frame {
+    overflow: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.42);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    width: min(520px, 100%);
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 30px 50px rgba(15, 23, 42, 0.2);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.node-circle {
+    stroke: #1f2937;
+    stroke-width: 1.5;
+    fill: #e2e8f0;
+}
+
+.node-label {
+    font-size: 12px;
+    fill: #111827;
+    pointer-events: none;
+}
+
+.edge-line {
+    stroke: #475569;
+    stroke-width: 1.8;
+    fill: none;
+}

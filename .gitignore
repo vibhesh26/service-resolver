@@ -1,0 +1,14 @@
+target/
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+.DS_Store
+node_modules/
+*.swp
